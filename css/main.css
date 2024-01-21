@@ -22,10 +22,11 @@ body {
 }
 
 .carousel-item img {
-  max-width: 80%; /* Ensure the image doesn't exceed the width of its container */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Remove any extra spacing below the images */
-  margin: 0 auto; /* Center the images within the carousel items */
+    padding-top: 15px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .carousel-text {

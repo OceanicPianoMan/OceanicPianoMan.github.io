@@ -15,9 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     trigger.addEventListener('click', function() {
         carousel.style.display = 'block';
+        trigger.style.display = 'none';
+        closeBtn.style.display = 'inline';
     });
 
     closeBtn.addEventListener('click', function() {
         carousel.style.display = 'none';
+        closeBtn.style.display = 'none';
+        trigger.style.display = 'block';
     });
 });

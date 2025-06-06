@@ -1,7 +1,39 @@
 body {
   padding-top: 15px;
   padding-bottom: 30px;
+  background-color: orangered;
 }
+
+html {background-color: black}
+
+/* top of page */
+
+.jumbotron {
+  text-align: center;
+}
+
+.button {
+  background-color: black; 
+  color: white; 
+  border: 2px solid gold;
+}
+
+.yt-button {
+
+  background-color: black; 
+  color: white; 
+  border: 2px solid gold;
+
+}
+
+.button:hover {background-color: grey}
+
+.button:active {
+  background-color: lightgray;
+  transform: translateY(2px);
+}
+
+/* HEADER END */
 
 .theme-dropdown .dropdown-menu {
   position: static;

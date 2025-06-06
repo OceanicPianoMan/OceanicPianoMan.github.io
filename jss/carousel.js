@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const trigger = document.getElementById('carouselTrigger');
     const carousel = document.getElementById('carouselThriller');
+    const bike = document.getElementById('carouselBikeTrigger');
     const closeBtn = document.getElementById('closeCarousel');
 
     trigger.addEventListener('mouseover', function() {
@@ -15,12 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     trigger.addEventListener('click', function() {
         carousel.style.display = 'block';
+        bike.style.display = 'block';
         trigger.style.display = 'none';
         closeBtn.style.display = 'inline';
     });
 
     closeBtn.addEventListener('click', function() {
         carousel.style.display = 'none';
+        bike.style.display = 'none';
         closeBtn.style.display = 'none';
         trigger.style.display = 'block';
     });

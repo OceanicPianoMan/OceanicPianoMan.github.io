@@ -1,30 +1,26 @@
-// carousel.js
+document.addEventListener('DOMContentLoaded', function () {
+  const triggers = document.querySelectorAll('.carousel-trigger');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const trigger = document.getElementById('carouselTrigger');
-    const carousel = document.getElementById('carouselThriller');
-    const bike = document.getElementById('carouselBikeTrigger');
-    const closeBtn = document.getElementById('closeCarousel');
+  triggers.forEach(trigger => {
+    const carouselId = trigger.dataset.target;
+    const closeId = trigger.dataset.close;
+    const carousel = document.getElementById(carouselId);
+    const closeBtn = document.getElementById(closeId);
 
-    trigger.addEventListener('mouseover', function() {
-        trigger.style.opacity = '0.8'; // Optional: visual feedback on hover
+    // Open carousel and hide preview
+    trigger.addEventListener('click', function () {
+      trigger.style.display = 'none';
+      carousel.style.display = 'block';
+      closeBtn.style.display = 'block';
+      carousel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    trigger.addEventListener('mouseout', function() {
-        trigger.style.opacity = '1'; // Reset opacity after hover
+    // Close carousel and show preview again
+    closeBtn.addEventListener('click', function () {
+      carousel.style.display = 'none';
+      trigger.style.display = 'block';
+      closeBtn.style.display = 'none';
+      trigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
-
-    trigger.addEventListener('click', function() {
-        carousel.style.display = 'block';
-        bike.style.display = 'block';
-        trigger.style.display = 'none';
-        closeBtn.style.display = 'inline';
-    });
-
-    closeBtn.addEventListener('click', function() {
-        carousel.style.display = 'none';
-        bike.style.display = 'none';
-        closeBtn.style.display = 'none';
-        trigger.style.display = 'block';
-    });
+  });
 });

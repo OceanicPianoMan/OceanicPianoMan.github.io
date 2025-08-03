@@ -29,8 +29,17 @@
         <div>
             <div class="container-fluid">
 
-                <img src="images/ThrillerBark/ThrillerBark (1).jpg" id="carouselTrigger" alt="Open Carousel" class="carousel-trigger">
+            <!-- Preview image -->
+            <div class="carousel-preview">
+              <img class="carousel-trigger" 
+                  src="images/ThrillerBark/ThrillerBark (1).jpg" 
+                  data-target="carouselThriller" 
+                  data-close="closeThriller" 
+                  data-hover-text="Open Gallery" />
+              <div class="hover-text">Thriller Bark III</div>
+            </div>
 
+                <!-- Carousel elements -->
                 <div id="carouselThriller" class="carousel slide carousel-fade" data-bs-ride="carousel" style="display: none;">
                     <div class="carousel-inner">
                         <div class="carousel-indicators">
@@ -40,6 +49,7 @@
                             <button type="button" data-bs-target="#carouselThriller" data-bs-slide-to="3" aria-balel="Slide 4"></button>
                             <button type="button" data-bs-target="#carouselThriller" data-bs-slide-to="4" aria-balel="Slide 5"></button>
                         </div>
+                        <!-- IMAGES -->
                         <div class="carousel-item active">
                             <img src="images/ThrillerBark/ThrillerBark (1).jpg" class="d-block w-100" alt="RollerRama Sign"
                                 class="img-fluid">
@@ -60,6 +70,7 @@
                             <img src="images/ThrillerBark/ThrillerBark (5).jpg" class="d-block w-100"
                                 alt="Pumpkin" class="img-fluid">
                         </div>
+                        <!-- Buttons -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselThriller"
                         data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,7 +82,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-            
+                    <!-- Text -->
                     <div class="carousel-text">
                         <p><i>Thriller Bark III 10/13/23</i></p>
                         <p>My first ever excursion using my camera in the wild! There really is a first time for everything :,]</p>
@@ -80,6 +91,10 @@
                         their wares, which is something never done before! RollerRama also holds many memories for me, as I went there
                         multiple times as a kid, so going there as an adult and for a completely different reason other than actually
                         skating is kinda surreal.</p>
+                    </div>
+                    <!-- Close button -->
+                    <div class="closeButton">
+                      <button class="closeCarousel" id="closeThriller" style="display:none;">Close</button>
                     </div>
                 </div>
             <br>

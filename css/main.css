@@ -29,6 +29,12 @@ html {
   transform: translateY(2px);
 }
 
+/* ============= HERO ============= */
+
+#hero-banner {
+  background-color: yellow;
+}
+
 /* ============= CAROUSEL STRUCTURE ============= */
 .carousel {
   display: flex;
@@ -86,6 +92,7 @@ html {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none; /* so clicks still go to the image */
+  text-shadow: 2px 2px 2px black;
   z-index: 2;
 }
 
@@ -99,7 +106,6 @@ html {
 
 /* ============= CLOSE BUTTON ============= */
 .closeButton {
-  background-color: #808080;
   padding: 5px 5px;
   display: flex;
   justify-content: flex-end;

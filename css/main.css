@@ -121,3 +121,24 @@ html {
 .carousel-inner {
   background-color: #B0C4DE;
 }
+
+.thumbnail-row {
+  display: flex;          /* horizontal layout */
+  justify-content: center;
+  gap: 10px;              /* spacing between thumbnails */
+  overflow-x: auto;       /* scroll if too many images */
+  padding: 10px 0;
+}
+
+.thumbnail-row .thumb img {
+  height: 80px;           /* fixed height for thumbnails */
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail-row .thumb img:hover {
+  transform: scale(1.1);
+  border-color: #F0E27B;
+}

@@ -1,162 +1,123 @@
+/* ============= GLOBAL STYLES ============= */
 body {
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding: 15px 0 30px;
   background-color: orangered;
 }
 
-html {background-color: black}
+html {
+  background-color: black;
+}
 
-/* top of page */
-
+/* ============= HEADER BUTTONS ============= */
 .jumbotron {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .button {
-  background-color: black; 
-  color: white; 
+  background-color: black;
+  color: white;
   border: 2px solid gold;
 }
 
-.yt-button {
-
-  background-color: black; 
-  color: white; 
-  border: 2px solid gold;
-
+.button:hover {
+  background-color: grey;
 }
-
-.button:hover {background-color: grey}
 
 .button:active {
   background-color: lightgray;
   transform: translateY(2px);
 }
 
-/* HEADER END */
-
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
-
-.theme-showcase .navbar .container {
-  width: auto;
-}
-
+/* ============= CAROUSEL STRUCTURE ============= */
 .carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 
 .carousel-item img {
-    padding-top: 15px;
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.carousel-text {
-    margin-top: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-    text-align: center;
-}
-
-.carousel-trigger {
-  position: relative;
-  padding-top: 15px;
+  padding: 15px 0;
   max-width: 80%;
   height: auto;
   display: block;
   margin: 0 auto;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* ============= CAROUSEL TEXT ============= */
+.carousel-text {
+  background: #A9A9A9;
+  text-align: center;
+  padding: 5px 8px;
+}
+
+/* ============= PREVIEW IMAGE (trigger) ============= */
+.carousel-preview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carousel-trigger {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
   cursor: pointer;
+  display: block;
+  transition: transform 0.3s ease; /* smooth scale */
+}
+
+.carousel-trigger img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.hover-text {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F0E27B;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* so clicks still go to the image */
+  z-index: 2;
 }
 
 .carousel-trigger:hover {
-  filter: brightness(1.5);
+  transform: scale(1.05); /* scales image and text together */
 }
 
-.carousel-trigger::after {
-  content: attr(data-hover-text);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
-  font-size: 1.2em;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  white-space: nowrap;
+.carousel-trigger:hover .hover-text {
+  opacity: 1; /* fade in text */
 }
 
-.carousel-trigger:hover::after {
-  opacity: 1;
-}
-
+/* ============= CLOSE BUTTON ============= */
 .closeButton {
+  background-color: #808080;
+  padding: 5px 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: flex-end;
 }
 
 .closeCarousel {
-  background-color: #0047AB;
+  background-color: #8B3A3A;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  display: none; /* start hidden */
-  margin: 20px auto;
+  display: none;
   font-weight: bold;
 }
 
+/* ============= CUSTOMS ============= */
 
-
-
-.carousel-preview {
-  position: relative;
-  display: inline-block;
-}
-
-.carousel-preview img.carousel-trigger {
-  transition: filter 0.7s ease;
-}
-
-.carousel-preview:hover img.carousel-trigger {
-  filter: grayscale(100%);
-}
-
-/* Overlay text */
-.carousel-preview .hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #F0E27B;
-  background-color: black;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.carousel-preview:hover .hover-text {
-  opacity: 1;
+.carousel-inner {
+  background-color: #B0C4DE;
 }

@@ -2,21 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const triggers = document.querySelectorAll('.carousel-trigger');
 
   triggers.forEach(trigger => {
-    const carouselId = trigger.dataset.target;
-    const closeId = trigger.dataset.close;
+    const carouselId = trigger.dataset.target;   // link trigger → carousel
+    const closeId = trigger.dataset.close;       // link trigger → close button
     const carousel = document.getElementById(carouselId);
     const closeBtn = document.getElementById(closeId);
 
-    // Open carousel and hide preview
-    trigger.addEventListener('click', function () {
+    // === OPEN: hide preview, show carousel ===
+    trigger.addEventListener('click', () => {
       trigger.style.display = 'none';
       carousel.style.display = 'block';
       closeBtn.style.display = 'block';
       carousel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    // Close carousel and show preview again
-    closeBtn.addEventListener('click', function () {
+    // === CLOSE: hide carousel, show preview ===
+    closeBtn.addEventListener('click', () => {
       carousel.style.display = 'none';
       trigger.style.display = 'block';
       closeBtn.style.display = 'none';

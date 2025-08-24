@@ -179,3 +179,58 @@ html {
     top: 90%;
   }
 }
+
+.contact-button {
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border: 2px solid gold;
+}
+
+.contact-button:hover {
+  background-color: grey;
+}
+
+/* Slide-in animation for carousel images */
+.carousel-item {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carousel-item.active {
+  transform: translateX(0);
+  opacity: 1;
+  position: relative; /* active slide on top */
+  z-index: 1;
+}
+
+/* For previous slide to move out to left */
+.carousel-item-next {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+.carousel-item-prev {
+  transform: translateX(-100%);
+}
+
+
+.carousel.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute; /* keeps it in the DOM but visually hidden */
+}
+
+.carousel.visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  transition: opacity 0.3s ease;
+}

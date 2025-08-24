@@ -1,17 +1,40 @@
 /* ============= GLOBAL STYLES ============= */
 body {
-  padding: 15px 0 30px;
   background-color: orangered;
+  margin: 0;
 }
 
 html {
-  background-color: black;
+  background-color: none;
 }
 
 /* ============= HEADER BUTTONS ============= */
+
+.fullBorder {
+  border: 2px solid black;
+  width: 100%;
+  margin: 2rem auto 2rem;
+  padding: 2% 2%;
+}
+
 .jumbotron {
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+.introWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0;
+}
+
+.introText {
+  background-color: black;
+  color: #F0E27B;
+  display: inline-block;
+  text-align: center;
+  font-size: 80%;
 }
 
 .button {
